@@ -15,10 +15,11 @@ class BuildMITIE(build):
 
 
 setup(
-    version='0.2.0',
+    version='10.2.0.dev1',
     name='mitie',
     packages=['mitie'],
     package_dir={'mitie': 'mitielib'},
+    package_data={'mitie': ['libmitie.so']},
     cmdclass={'build': BuildMITIE},
     classifiers=[
         'Operating System :: MacOS :: MacOS X',

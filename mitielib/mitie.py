@@ -2,6 +2,8 @@ import ctypes
 import os
 import platform
 
+import chardet
+
 
 def _last_modified_time(filename):
     if os.path.isfile(filename):
@@ -125,6 +127,10 @@ def to_default_str_type(string):
             string = string.decode('utf-8')
 
     else:
+        # turn string to unicode
+        encoding = chardet.detect(string)['encoding']
+        string = string.decode(encoding)
+
         if hasattr(string, 'encode'):
             string = string.encode('utf-8')
 

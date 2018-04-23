@@ -35,7 +35,7 @@ SRC += ../dlib/dlib/misc_api/misc_api_kernel_2.cpp
 
 CFLAGS +=  -fpic  -Wall -W  -O3   -Iinclude -I../dlib 
 LDFLAGS = -shared
-CC = g++
+CC = gcc-4.8
 
 HEADERS=include/mitie.h
 

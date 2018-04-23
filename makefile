@@ -38,3 +38,7 @@ clean:
 		$(MAKE) -C $$dir clean; \
 	done
 	@rm -rf ner_stream ner_example relation_extraction_example train_text_categorizer_BoW_example
+
+.PHONY: upload_package
+upload_package:
+	devpi upload -v --no-vcs --formats sdist -vvv

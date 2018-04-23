@@ -15,7 +15,7 @@ class BuildMITIE(build):
 
 
 setup(
-    version='10.2.0.dev3',
+    version='10.2.0.dev5',
     name='mitie',
     packages=['mitie'],
     package_dir={'mitie': 'mitielib'},
